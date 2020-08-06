@@ -1,9 +1,13 @@
 import React from "react";
 import "./App.css";
-import SassComponent from "./SassComponent";
+import StyledComponent from "./StyledComponent3";
 
 function App() {
-  return <SassComponent />;
+  return (
+    <>
+      <StyledComponent />
+    </>
+  );
 }
 
 export default App;

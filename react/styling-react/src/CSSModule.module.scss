@@ -1,0 +1,21 @@
+.wrapper {
+  background: black;
+  color: white;
+  padding: 1rem;
+  font-size: 2rem;
+
+  &.inverted {
+    // inverted가 .wrapper와 함께 사용되었을 때만 적용
+    color: black;
+    background: white;
+    border: 1px solid black;
+  }
+}
+
+// 글로벌 CSS를 작성하고 싶다면 :global{}로 감싸면 됨
+:global {
+  .something {
+    color: aqua;
+    font-weight: 800;
+  }
+}
