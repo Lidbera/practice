@@ -1,13 +1,20 @@
-.TodoListItem {
-  padding: 1rem;
-
-  display: flex;
-  align-items: center;
+.TodoListItem-virtualized {
+  // 엘리먼트 사이사이에 테두리를 넣어줌
+  & + & {
+    border-top: 1px solid #dee2e6;
+  }
 
   // 자식 선택 짝수
   &:nth-child(even) {
     background: #f8f9fa;
   }
+}
+
+.TodoListItem {
+  padding: 1rem;
+
+  display: flex;
+  align-items: center;
 
   .checkbox {
     cursor: pointer;
@@ -43,10 +50,5 @@
     &:hover {
       color: #ff8787;
     }
-  }
-
-  // 엘리먼트 사이사이에 테두리를 넣어줌
-  & + & {
-    border-top: 1px solid #dee2e6;
   }
 }
