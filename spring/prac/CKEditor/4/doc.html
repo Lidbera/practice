@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <script src="./ckeditor4/ckeditor.js"></script>
+  </head>
+  <body>
+    <textarea name="editor">sample content</textarea>
+    <script>
+      CKEDITOR.replace("editor", {
+        customConfig: "../ck_config.js",
+      });
+      $("#myedit-btn").on("click", function () {
+        var dt = $.trim(CKEDITOR.instances.myedit.getData());
+        alert("내용: [" + dt + "]");
+        prac.http
+          .post("process.json", { edit: dt })
+          .then(function (flag) {
+            alert("flag: " + flag);
+          })
+          .catch(function (err) {
+            alert("err: " + err);
+          });
+      });
+      $("#list-btn").on("click", function () {
+        prac.http.get("list.json").then(function (list) {
+          var str = "";
+          for (var i = 0; i < list.length; i++) {
+            str += i + 1 + "번째: " + list[i].html;
+          }
+          CKEDITOR.instances.myedit.setData(str);
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "CKEditor4": {
+    "prefix": "ck4",
+    "body": [
+      "<html>",
+      "  <head>",
+      "    <script src=\"./ckeditor4/ckeditor.js\"></script>",
+      "  </head>",
+      "  <body>",
+      "    <textarea name=\"editor\">sample content</textarea>",
+      "    <script>",
+      "      CKEDITOR.replace(\"editor\", {",
+      "        customConfig: \"../ck_config.js\",",
+      "      });",
+      "    </script>",
+      "  </body>",
+      "</html>"
+    ],
+    "description": "CKEditor4 Standard Package"
+  }
+}
