@@ -44,6 +44,7 @@ const Header = () => {
           </div>
         </Wrapper>
       </HeaderBlock>
+      <Spacer />
     </>
   );
 };
