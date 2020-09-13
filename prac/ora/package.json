@@ -1,0 +1,21 @@
+{
+  "name": "ora",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "oracledb": "^5.0.0"
+  },
+  "scripts": {
+    "start": "nodemon --watch src/ -r esm src/index.js"
+  },
+  "devDependencies": {
+    "eslint": "^7.8.1",
+    "eslint-config-prettier": "^6.11.0",
+    "nodemon": "^2.0.4"
+  }
+}
