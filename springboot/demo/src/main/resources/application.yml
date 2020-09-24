@@ -1,0 +1,6 @@
+server:
+  port: 8081
+
+holoman:
+  name: 수정
+  how-long: 100
